@@ -10,7 +10,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // إزالة علامة "DEBUG"
       debugShowCheckedModeBanner: false,
       title: 'Flutter Dashboard UI',
       theme: ThemeData(primarySwatch: Colors.blue),
