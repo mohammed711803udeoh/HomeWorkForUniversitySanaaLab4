@@ -24,20 +24,15 @@ class DashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // لون خلفية الشاشة الشاملة (التي تحيط بالكونتينر المركزي)
     const Color lightBlueBackground = Color(0xFFC0E0F0);
 
-    // اللون السماوي الخفيف للكونتينر المركزي
-    const Color centerContainerColor = Color(
-      0xFFE0F7FA,
-    ); // مثال على لون سماوي خفيف جداً
+    const Color centerContainerColor = Color(0xFFE0F7FA);
 
     return Scaffold(
       backgroundColor: lightBlueBackground,
       body: Center(
         child: Container(
-          // خصائص الكونتينر المركزي
-          width: 350, // تحديد عرض الكونتينر ليكون بنصف الشاشة
+          width: 350,
           decoration: BoxDecoration(
             color: centerContainerColor,
             borderRadius: BorderRadius.circular(15.0), // لإضافة زوايا دائرية
@@ -51,11 +46,9 @@ class DashboardScreen extends StatelessWidget {
           ),
 
           child: SafeArea(
-            // وضع الـ SingleChildScrollView داخل الكونتينر
             child: SingleChildScrollView(
               child: Column(
                 children: <Widget>[
-                  // قسم الأزرار A, B, C
                   Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Row(
@@ -68,14 +61,12 @@ class DashboardScreen extends StatelessWidget {
                     ),
                   ),
 
-                  // قسم "Fancy Section"
                   Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
                       vertical: 8.0,
                     ),
                     child: Container(
-                      // لون الخلفية الأرجواني الفاتح داخل الكونتينر المركزي
                       decoration: BoxDecoration(
                         color: const Color(0xFFD4C8E8),
                         borderRadius: BorderRadius.circular(10.0),
@@ -92,10 +83,9 @@ class DashboardScreen extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 15),
-                          // شبكة الأزرار 1-6
+
                           Column(
                             children: <Widget>[
-                              // الصف الأول 1, 2, 3
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
@@ -106,7 +96,7 @@ class DashboardScreen extends StatelessWidget {
                                 ],
                               ),
                               const SizedBox(height: 15),
-                              // الصف الثاني 4, 5, 6
+
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
@@ -125,7 +115,6 @@ class DashboardScreen extends StatelessWidget {
 
                   const SizedBox(height: 25),
 
-                  // قسم "Info Cards"
                   const Text(
                     'Info Cards',
                     style: TextStyle(
@@ -162,7 +151,7 @@ class DashboardScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 20), // مسافة في الأسفل
+                  const SizedBox(height: 20),
                 ],
               ),
             ),
@@ -172,7 +161,6 @@ class DashboardScreen extends StatelessWidget {
     );
   }
 
-  // الدوال المساعدة تبقى كما هي
   Widget _buildTopButton(String text, Color color) {
     return Container(
       width: 80,
